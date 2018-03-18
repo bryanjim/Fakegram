@@ -4,9 +4,16 @@ git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
   "https://github.com/#{repo_name}.git"
 end
+gem 'tether-rails'
+gem 'popper_js', '~> 1.12.9'
+gem 'jquery-rails'
+
+gem 'bootstrap-sass', '~> 3.3.7'
 
 gem "paperclip", "~> 5.2.1"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+gem 'simple_form'
+
 gem 'rails', '~> 5.1.5'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
