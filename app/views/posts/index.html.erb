@@ -1,5 +1,13 @@
-<h1>Photogram</h1>
-<% @posts.each do |post| %>
-  <%= image_tag post.image.url(:medium) %>
-  <%= post.caption %>
-<% end %>
+<div class="container">
+  <div class="posts-wrapper row">
+  <% @posts.each do |post| %>
+    <div class="post">
+      <div class="post-head">
+          <p class="name">Bryan Jimenez</p>
+        </div>
+        <div class="image center-block">
+          <%= image_tag post.image.url(:medium), class:"img-responsive" %>
+        </div>
+          <p class="caption"><%= post.caption%></p>
+  <% end %>
+</div>
